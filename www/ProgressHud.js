@@ -9,7 +9,7 @@
  var exec = require('cordova/exec');
 
  var PHexec = function (methodName, options, success, error) {
- 	exec(success, error, "ProgressHud", methodName, options);
+ 	cordova.exec(success, error, "ProgressHud", methodName, options);
  };
 
  var ProgressHud = function () {
