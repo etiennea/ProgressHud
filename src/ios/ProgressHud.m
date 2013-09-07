@@ -15,7 +15,7 @@
 
 - (void)show:(CDVInvokedUrlCommand*)command
 {
-	self.callbackId = command.callbackId;
+	self.callbackID = command.callbackId;
 	NSArray *arguments = command.arguments;
 	NSDictionary *options = [arguments objectAtIndex:0];
 	self.progressHUD = nil;
@@ -75,7 +75,7 @@
 {
 	self.callbackID = command.callbackId;
 	NSArray *arguments = command.arguments;
-	NSDictionary *options = [arguments objectAtIndex:0];
+	//NSDictionary *options = [arguments objectAtIndex:0];
 	//NSLog(@"hide:%@\n withDict:%@", arguments, options);
 
 	// The first argument in the arguments parameter is the callbackID.
