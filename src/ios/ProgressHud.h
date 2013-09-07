@@ -6,12 +6,7 @@
 // Copyright 2011 Olivier Louvignes. All rights reserved.
 // MIT Licensed
 
-#ifdef CORDOVA_FRAMEWORK
-	#import <CORDOVA/CDVPlugin.h>
-#else
-	#import "CDVPlugin.h"
-#endif
-
+#import <Cordova/CDVPlugin.h>
 #import "MBProgressHUD.h"
 
 @interface ProgressHud : CDVPlugin {
