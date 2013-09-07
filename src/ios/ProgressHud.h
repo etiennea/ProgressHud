@@ -7,7 +7,7 @@
 // MIT Licensed
 
 #import <Foundation/Foundation.h>
-#import "CDVPlugin.h"
+#import <Cordova/CDV.h>
 #import "MBProgressHUD.h"
 
 @interface ProgressHud : CDVPlugin {
