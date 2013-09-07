@@ -6,7 +6,8 @@
 // Copyright 2011 Olivier Louvignes. All rights reserved.
 // MIT Licensed
 
-#import <Cordova/CDVPlugin.h>
+#import <Foundation/Foundation.h>
+#import "CDVPlugin.h"
 #import "MBProgressHUD.h"
 
 @interface ProgressHud : CDVPlugin {
