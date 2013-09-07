@@ -6,72 +6,73 @@
  * Copyright (c) Jean-Christophe Hoelt 2013
  * Copyright (c) Etienne Adriaenssen 2013
  */
+ exec = require('cordova/exec')
 
-var PHexec = function (methodName, options, success, error) {
-    cordova.exec(success, error, "ProgressHud", methodName, options);
-};
+ var PHexec = function (methodName, options, success, error) {
+ 	cordova.exec(success, error, "ProgressHud", methodName, options);
+ };
 
-var ProgressHud = function () {
-    this.options = {};
-};
+ var ProgressHud = function () {
+ 	this.options = {};
+ };
 
-ProgressHud.prototype.show = function(options, callback) {
-	if(!options) options = {};
-	var scope = options.scope || null;
-	delete options.scope;
+ ProgressHud.prototype.show = function(options, callback) {
+ 	if(!options) options = {};
+ 	var scope = options.scope || null;
+ 	delete options.scope;
 
-	var service = 'ProgressHud',
-		action = 'show',
-		callbackId = service + (cordova.callbackId + 1);
+ 	var service = 'ProgressHud',
+ 	action = 'show',
+ 	callbackId = service + (cordova.callbackId + 1);
 
-	var config = {
-		mode: options.mode || 'indeterminate',
-		labelText: options.labelText || 'Loading...',
-		detailsLabelText: options.detailsLabelText || '',
-		progress: options.progress || 0
-	};
+ 	var config = {
+ 		mode: options.mode || 'indeterminate',
+ 		labelText: options.labelText || 'Loading...',
+ 		detailsLabelText: options.detailsLabelText || '',
+ 		progress: options.progress || 0
+ 	};
 
-	var _callback = function(result) {
-		if(typeof callback == 'function') callback.apply(scope, arguments);
-	};
+ 	var _callback = function(result) {
+ 		if(typeof callback == 'function') callback.apply(scope, arguments);
+ 	};
 
-	return exec(action, [config], _callback, _callback);
-};
+ 	return exec(action, [config], _callback, _callback);
+ };
 
-ProgressHud.prototype.set = function(options, callback) {
-	if(!options) options = {};
-	var scope = options.scope || null;
-	delete options.scope;
+ ProgressHud.prototype.set = function(options, callback) {
+ 	if(!options) options = {};
+ 	var scope = options.scope || null;
+ 	delete options.scope;
 
-	var service = 'ProgressHud',
-		action = 'set',
-		callbackId = service + (cordova.callbackId + 1);
+ 	var service = 'ProgressHud',
+ 	action = 'set',
+ 	callbackId = service + (cordova.callbackId + 1);
 
-	var _callback = function(result) {
-		if(typeof callback == 'function') callback.apply(scope, arguments);
-	};
+ 	var _callback = function(result) {
+ 		if(typeof callback == 'function') callback.apply(scope, arguments);
+ 	};
 
-	return exec(action, [options], _callback, _callback);
+ 	return exec(action, [options], _callback, _callback);
 
-};
+ };
 
-ProgressHud.prototype.hide = function(options, callback) {
-	if(!options) options = {};
-	var scope = options.scope || null;
-	delete options.scope;
+ ProgressHud.prototype.hide = function(options, callback) {
+ 	if(!options) options = {};
+ 	var scope = options.scope || null;
+ 	delete options.scope;
 
-	var service = 'ProgressHud',
-		action = 'hide',
-		callbackId = service + (cordova.callbackId + 1);
+ 	var service = 'ProgressHud',
+ 	action = 'hide',
+ 	callbackId = service + (cordova.callbackId + 1);
 
-	var config = {};
+ 	var config = {};
 
-	var _callback = function(result) {
-		if(typeof callback == 'function') callback.apply(scope, arguments);
-	};
+ 	var _callback = function(result) {
+ 		if(typeof callback == 'function') callback.apply(scope, arguments);
+ 	};
 
-	return PHexec(action, [config], _callback, _callback);
+ 	return PHexec(action, [config], _callback, _callback);
 
-};
+ };
 
-module.exports = new ProgressHud();
+ module.exports = new ProgressHud();
