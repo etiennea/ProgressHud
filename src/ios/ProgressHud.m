@@ -22,7 +22,7 @@
 	self.progressHUD = [MBProgressHUD showHUDAddedTo:self.webView.superview animated:YES];
 	self.progressHUD.mode = MBProgressHUDModeIndeterminate;
 
-	[self set:arguments withDict:options];
+	[self set:command];
 
 }
 
