@@ -8,13 +8,7 @@
  */
  var exec = require('cordova/exec');
 
- var PHexec = function (methodName, options, success, error) {
- 	cordova.exec(success, error, "ProgressHud", methodName, options);
- };
-
- var ProgressHud = function () {
- 	this.options = {};
- };
+ function ProgressHud() {}
 
  ProgressHud.prototype.show = function(options, callback) {
  	if(!options) options = {};
@@ -36,7 +30,8 @@
  		if(typeof callback == 'function') callback.apply(scope, arguments);
  	};
 
- 	return exec(action, [config], _callback, _callback);
+ 	return cordova.exec(_callback, _callback, service, action, [config]);
+
  };
 
  ProgressHud.prototype.set = function(options, callback) {
@@ -52,7 +47,7 @@
  		if(typeof callback == 'function') callback.apply(scope, arguments);
  	};
 
- 	return exec(action, [options], _callback, _callback);
+ 	return cordova.exec(_callback, _callback, service, action, [options]);
 
  };
 
@@ -71,7 +66,7 @@
  		if(typeof callback == 'function') callback.apply(scope, arguments);
  	};
 
- 	return PHexec(action, [config], _callback, _callback);
+ 	return cordova.exec(_callback, _callback, service, action, [config]);
 
  };
 
