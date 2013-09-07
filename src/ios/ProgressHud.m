@@ -16,8 +16,6 @@
 - (void)show:(CDVInvokedUrlCommand*)command
 {
 	self.callbackID = command.callbackId;
-	NSArray *arguments = command.arguments;
-	NSDictionary *options = [arguments objectAtIndex:0];
 	self.progressHUD = nil;
 	self.progressHUD = [MBProgressHUD showHUDAddedTo:self.webView.superview animated:YES];
 	self.progressHUD.mode = MBProgressHUDModeIndeterminate;
