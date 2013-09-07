@@ -1,4 +1,3 @@
-cordova.define("com.phonegap.plugins.progresshud.ProgressHud", function(require, exports, module) {
 /**
  * A plugin to enable iOS ProgressBar on phonegap 3.0
  *
@@ -72,4 +71,3 @@ cordova.define("com.phonegap.plugins.progresshud.ProgressHud", function(require,
  };
 
  module.exports = new ProgressHud();
-});
