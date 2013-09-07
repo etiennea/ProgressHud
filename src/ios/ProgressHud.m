@@ -13,9 +13,11 @@
 @synthesize callbackID = _callbackID;
 @synthesize progressHUD = _progressHUD;
 
--(void)show:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options {
-	//NSLog(@"set:%@\n withDict:%@", arguments, options);
-
+- (void)show:(CDVInvokedUrlCommand*)command
+{
+	self.callbackId = command.callbackId;
+	NSArray *arguments = command.arguments;
+	NSDictionary *options = [arguments objectAtIndex:0];
 	self.progressHUD = nil;
 	self.progressHUD = [MBProgressHUD showHUDAddedTo:self.webView.superview animated:YES];
 	self.progressHUD.mode = MBProgressHUDModeIndeterminate;
@@ -24,7 +26,11 @@
 
 }
 
--(void)set:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options {
+- (void)set:(CDVInvokedUrlCommand*)command
+{
+	self.callbackId = command.callbackId;
+	NSArray *arguments = command.arguments;
+	NSDictionary *options = [arguments objectAtIndex:0];
 	//NSLog(@"set:%@\n withDict:%@", arguments, options);
 
 	// The first argument in the arguments parameter is the callbackID.
@@ -66,7 +72,11 @@
 
 }
 
--(void)hide:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options {
+- (void)hide:(CDVInvokedUrlCommand*)command
+{
+	self.callbackId = command.callbackId;
+	NSArray *arguments = command.arguments;
+	NSDictionary *options = [arguments objectAtIndex:0];
 	//NSLog(@"hide:%@\n withDict:%@", arguments, options);
 
 	// The first argument in the arguments parameter is the callbackID.

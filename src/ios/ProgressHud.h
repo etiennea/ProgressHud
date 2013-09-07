@@ -20,8 +20,8 @@
 @property (nonatomic, assign) MBProgressHUD* progressHUD;
 
 //Instance Method
-- (void) show:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
-- (void) set:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
-- (void) hide:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
+- (void)show:(CDVInvokedUrlCommand*)command;
+- (void)set:(CDVInvokedUrlCommand*)command;
+- (void)hide:(CDVInvokedUrlCommand*)command;
 
 @end
