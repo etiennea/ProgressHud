@@ -24,6 +24,6 @@
         <header-file src="src/ios/ProgressHud.h" />
         <source-file src="src/ios/ProgressHud.m" />
 
-         <framework src="Cordova.framework" />
+        <framework src="Cordova.framework" />
     </platform>
 </plugin>
