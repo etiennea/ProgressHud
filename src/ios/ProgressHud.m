@@ -74,7 +74,7 @@
 - (void)hide:(CDVInvokedUrlCommand*)command
 {
 	self.callbackID = command.callbackId;
-	NSArray *arguments = command.arguments;
+	//NSArray *arguments = command.arguments;
 	//NSDictionary *options = [arguments objectAtIndex:0];
 	//NSLog(@"hide:%@\n withDict:%@", arguments, options);
 
