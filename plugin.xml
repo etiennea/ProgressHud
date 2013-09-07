@@ -9,6 +9,8 @@
     <description>ProgressHud Plugin</description>
     <license>MIT</license>
 
+    <asset src="www/ProgressHud.js" target="ProgressHud.js" />
+
     <js-module src="www/ProgressHud.js" name="ProgressHud">
         <clobbers target="progressHud" />
     </js-module>
@@ -17,7 +19,7 @@
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="ProgressHud">
-                <param name="ios-package" value="ProgressHud" />
+                <param name="ios-package" value="ProgressHud"/>
             </feature>
         </config-file>
 
@@ -25,6 +27,5 @@
         <source-file src="src/ios/ProgressHud.m" />
         <header-file src="src/ios/MBProgressHud.h" />
         <source-file src="src/ios/MBProgressHud.m" />
-
     </platform>
 </plugin>
