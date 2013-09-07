@@ -1,9 +1,10 @@
-cordova.define("com.phonegap.plugins.progresshud.ProgressHud", function(require, exports, module) {/** 
- * A plugin to enable iOS In-App Purchases.
+/**
+ * A plugin to enable iOS ProgressBar on phonegap 3.0
  *
  * Copyright (c) Matt Kane 2011
  * Copyright (c) Guillaume Charhon 2012
  * Copyright (c) Jean-Christophe Hoelt 2013
+ * Copyright (c) Etienne Adriaenssen 2013
  */
 
 var exec = function (methodName, options, success, error) {
@@ -78,4 +79,3 @@ ProgressHud.prototype.hide = function(options, callback) {
 };
 
 module.exports = new ProgressHud();
-});
