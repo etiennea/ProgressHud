@@ -5,25 +5,19 @@
     id="com.phonegap.plugins.progresshud"
     version="2.0.0">
 
-    <name>InAppPurchase</name>
-	
-    <engines>
-        <engine name="cordova" version=">=2.4.0" />
-    </engines>
-	
-    <js-module src="ProgressHud.js" name="ProgressHud">
-        <clobbers target="window.hud" />
+    <name>ProgressHud</name>
+    <description>ProgressHud Plugin</description>
+    <license>MIT</license>
+
+    <js-module src="www/ProgressHud.js" name="ProgressHud">
+        <clobbers target="hud" />
     </js-module>
 
     <!-- ios -->
     <platform name="ios">
-        <!-- Cordova 2.2 -->
-        <plugins-plist key="ProgressHud" string="ProgressHud" />
-                    
-        <!-- Cordova 2.5+ -->
-        <config-file target="config.xml" parent="/widget/plugins">
+        <config-file target="config.xml" parent="/*">
             <feature name="ProgressHud">
-            	<param name="ios-package" value="ProgressHud" />
+                <param name="ios-package" value="ProgressHud" />
             </feature>
         </config-file>
 
