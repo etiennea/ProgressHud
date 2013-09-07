@@ -28,7 +28,7 @@
 
 - (void)set:(CDVInvokedUrlCommand*)command
 {
-	self.callbackId = command.callbackId;
+	self.callbackID = command.callbackId;
 	NSArray *arguments = command.arguments;
 	NSDictionary *options = [arguments objectAtIndex:0];
 	//NSLog(@"set:%@\n withDict:%@", arguments, options);
@@ -36,7 +36,6 @@
 	// The first argument in the arguments parameter is the callbackID.
 	// We use this to send data back to the successCallback or failureCallback
 	// through PluginResult.
-	self.callbackID = [arguments pop];
 
 	// Build returned result
 	NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
@@ -74,7 +73,7 @@
 
 - (void)hide:(CDVInvokedUrlCommand*)command
 {
-	self.callbackId = command.callbackId;
+	self.callbackID = command.callbackId;
 	NSArray *arguments = command.arguments;
 	NSDictionary *options = [arguments objectAtIndex:0];
 	//NSLog(@"hide:%@\n withDict:%@", arguments, options);
@@ -82,7 +81,7 @@
 	// The first argument in the arguments parameter is the callbackID.
 	// We use this to send data back to the successCallback or failureCallback
 	// through PluginResult.
-	self.callbackID = [arguments pop];
+
 
 	// Build returned result
 	NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
