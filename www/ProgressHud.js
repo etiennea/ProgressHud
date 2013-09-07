@@ -6,10 +6,10 @@
  * Copyright (c) Jean-Christophe Hoelt 2013
  * Copyright (c) Etienne Adriaenssen 2013
  */
- exec = require('cordova/exec')
+ var exec = require('cordova/exec');
 
  var PHexec = function (methodName, options, success, error) {
- 	cordova.exec(success, error, "ProgressHud", methodName, options);
+ 	exec(success, error, "ProgressHud", methodName, options);
  };
 
  var ProgressHud = function () {
