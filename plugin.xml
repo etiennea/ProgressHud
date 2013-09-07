@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    id="com.phonegap.plugins.progresshud"
-    version="2.0.0">
+    id="org.apache.cordova.core.progresshud"
+    version="1.0.0">
 
     <name>ProgressHud</name>
     <description>ProgressHud Plugin</description>
     <license>MIT</license>
-
-    <asset src="www/ProgressHud.js" target="ProgressHud.js" />
 
     <js-module src="www/ProgressHud.js" name="ProgressHud">
         <clobbers target="progressHud" />
