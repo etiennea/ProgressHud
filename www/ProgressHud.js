@@ -7,12 +7,8 @@
  * Copyright (c) Etienne Adriaenssen 2013
  */
 
-var exec = function (methodName, options, success, error) {
+var PHexec = function (methodName, options, success, error) {
     cordova.exec(success, error, "ProgressHud", methodName, options);
-};
-
-var log = function (msg) {
-    console.log("ProgressHud[js]: " + msg);
 };
 
 var ProgressHud = function () {
@@ -74,7 +70,7 @@ ProgressHud.prototype.hide = function(options, callback) {
 		if(typeof callback == 'function') callback.apply(scope, arguments);
 	};
 
-	return exec(action, [config], _callback, _callback);
+	return PHexec(action, [config], _callback, _callback);
 
 };
 
