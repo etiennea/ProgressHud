@@ -10,7 +10,7 @@
     <license>MIT</license>
 
     <js-module src="www/ProgressHud.js" name="ProgressHud">
-        <clobbers target="hud" />
+        <clobbers target="progressHud" />
     </js-module>
 
     <!-- ios -->
