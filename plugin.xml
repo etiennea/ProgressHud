@@ -23,6 +23,8 @@
 
         <header-file src="src/ios/ProgressHud.h" />
         <source-file src="src/ios/ProgressHud.m" />
+        <header-file src="src/ios/MBProgressHud.h" />
+        <source-file src="src/ios/MBProgressHud.m" />
 
         <framework src="Cordova.framework" />
     </platform>
