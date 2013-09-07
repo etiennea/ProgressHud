@@ -6,7 +6,6 @@
 // Copyright 2011 Olivier Louvignes. All rights reserved.
 // MIT Licensed
 
-#import <Foundation/Foundation.h>
 #import <Cordova/CDVPlugin.h>
 #import "MBProgressHUD.h"
 
