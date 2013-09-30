@@ -13,17 +13,26 @@
         <clobbers target="progressHud" />
     </js-module>
 
-    <!-- ios -->
-    <platform name="ios">
-        <config-file target="config.xml" parent="/widget/plugins">
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
             <feature name="ProgressHud">
-                <param name="ios-package" value="ProgressHud"/>
-            </feature>
-        </config-file>
+             <param name="android-package" value="com.phonegap.plugins.progresshud"/>
+         </feature>
+     </config-file>
+ </platform>
 
-        <header-file src="src/ios/ProgressHud.h" />
-        <source-file src="src/ios/ProgressHud.m" />
-        <header-file src="src/ios/MBProgressHud.h" />
-        <source-file src="src/ios/MBProgressHud.m" />
-    </platform>
+ <!-- ios -->
+ <platform name="ios">
+    <config-file target="config.xml" parent="/widget/plugins">
+        <feature name="ProgressHud">
+            <param name="ios-package" value="ProgressHud"/>
+        </feature>
+    </config-file>
+
+    <header-file src="src/ios/ProgressHud.h" />
+    <source-file src="src/ios/ProgressHud.m" />
+    <header-file src="src/ios/MBProgressHud.h" />
+    <source-file src="src/ios/MBProgressHud.m" />
+</platform>
 </plugin>
