@@ -11,6 +11,8 @@
  function ProgressHud() {}
 
  ProgressHud.prototype.show = function(options, callback) {
+ 	if(/android/i.test(navigator.userAgent))
+ 		return;
  	if(!options) options = {};
  	var scope = options.scope || null;
  	delete options.scope;
@@ -35,6 +37,8 @@
  };
 
  ProgressHud.prototype.set = function(options, callback) {
+ 	if(/android/i.test(navigator.userAgent))
+ 		return;
  	if(!options) options = {};
  	var scope = options.scope || null;
  	delete options.scope;
@@ -52,6 +56,8 @@
  };
 
  ProgressHud.prototype.hide = function(options, callback) {
+ 	if(/android/i.test(navigator.userAgent))
+ 		return;
  	if(!options) options = {};
  	var scope = options.scope || null;
  	delete options.scope;
